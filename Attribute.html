@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .d {
+        border: 2px solid black;
+        width: 100px;
+        height: 100px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="d" data-count="1000"></div>
+</body>
+<script>
+    const d = document.querySelector(".d");
+    d.innerHTML = "0"
+    window.addEventListener("DOMContentLoaded", () => {
+        let count = 0;
+        setInterval(() => {
+            let absorve_data = d.getAttribute("data-count");
+            // if (count < absorve_data) {
+            //     count++;
+            //     d.innerHTML=count;
+            // }
+        }, 1000);
+    })
+
+</script>
+
+</html>
